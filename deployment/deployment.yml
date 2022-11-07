@@ -3,15 +3,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: beam-mp-server
-  namespace: beam-mp
 spec:
   selector:
     matchLabels:
-      app: beam-mp-server
+      app: beam-mp
   template:
     metadata:
       labels:
-        app: beam-mp-server
+        app: beam-mp
     spec:
       imagePullSecrets:
         - name: regcred

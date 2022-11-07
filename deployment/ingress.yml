@@ -15,15 +15,15 @@ spec:
               service:
                 name: beam-mp-service
                 port:
-                  number: 8083
-    - host: beammp.vagahbond.com
-      http:
-        paths:
-          - pathType: Prefix
-            path: "/"
-            backend:
-              service:
-                name: beam-mp-service
-                port:
-                  number: 30814
+                  number: 8087
+    # - host: beammp.vagahbond.com
+    #   http:
+    #     paths:
+    #       - pathType: Prefix
+    #         path: "/"
+    #         backend:
+    #           service:
+    #             name: beam-mp-service
+    #             port:
+    #               number: 30814
 
