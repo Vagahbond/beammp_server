@@ -3,7 +3,7 @@ FROM debian:11
 RUN apt-get update -y
 RUN apt-get install -y liblua5.3-dev curl
 
-RUN mkdir /src/app
+RUN mkdir -p /src/app
 
 WORKDIR /src/app
 
@@ -23,4 +23,6 @@ RUN chmod +x ./BeamMP-Server-debian-11
     #                     All paths are considered relative to this,
     #                     including the path given in --config.
 
-CMD ["/server_files/BeamMP-Server-debian-11", "--working-directory=/server_files"]
+EXPOSE 30814
+EXPOSE 8083
+CMD ["./BeamMP-Server-debian-11", "--config=/src/app/ServerConfig.toml", "--working-directory=/server_files" ]
