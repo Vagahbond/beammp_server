@@ -1,0 +1,28 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beam-mp-server
+  namespace: beam-mp
+spec:
+  selector:
+    matchLabels:
+      app: beam-mp
+  template:
+    spec:
+      containers:
+      - name: beam-mp-server
+        image: registry.qtmsheep.com/vagahbond/beammp_server
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 30814
+        volumeMounts:
+        - mountPath: /server_files
+          name: beam-mp-data
+      volumes:
+      - name: beam-mp-data
+        persistentVolumeClaim:
+          claimName: beam-mp-data

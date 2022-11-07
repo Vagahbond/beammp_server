@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: beam-mp-pvc
+  namespace: beam-mp
+
+spec:
+  selector:
+    matchLabels:
+      app: beam-mp
+  resources:
+    requests:
+      storage: 2Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
