@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: beam-mp-conf
+  namespace: beam-mp
+data:
+  SERVER_KEY: example
