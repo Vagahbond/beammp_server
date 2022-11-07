@@ -1,5 +1,16 @@
 FROM debian:11
 
+RUN apt-get update -y
+RUN apt-get install -y liblua5.3-dev curl
+
+RUN mkdir -p /src/app
+
+WORKDIR /src/app
+
+COPY ./BeamMP-Server-debian-11 ./
+COPY ./ServerConfig.toml ./
+RUN chmod +x ./BeamMP-Server-debian-11
+
 # Separate exe and storage so that persistant volume claim works
 
     # --config=/path/to/ServerConfig.toml
@@ -12,14 +23,6 @@ FROM debian:11
     #                     All paths are considered relative to this,
     #                     including the path given in --config.
 
-COPY server_files /server_files
-RUN chmod +x /server_files/BeamMP-Server-debian-11
-
-RUN apt-get update -y
-RUN apt-get install -y liblua5.3-dev curl
-
-
-
-
-
-CMD ["/server_files/BeamMP-Server-debian-11"]
+EXPOSE 30814
+EXPOSE 8083
+CMD ["./BeamMP-Server-debian-11", "--config=/src/app/ServerConfig.toml", "--working-directory=/server_files" ]
