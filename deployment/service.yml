@@ -5,8 +5,12 @@ metadata:
   namespace: beam-mp
 spec:
   selector:
-    app: beam-mp
+    app: beam-mp-server
   ports:
     - name: beam-mp-port
       port: 30814
       targetPort: 30814
+
+    - name: beam-mp-test-port
+      port: 8083
+      targetPort: 8083

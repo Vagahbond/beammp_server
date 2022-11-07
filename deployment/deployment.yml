@@ -7,9 +7,14 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: beam-mp
+      app: beam-mp-server
   template:
+    metadata:
+      labels:
+        app: beam-mp-server
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
       - name: beam-mp-server
         image: registry.qtmsheep.com/vagahbond/beammp_server
@@ -19,10 +24,11 @@ spec:
             cpu: "250m"
         ports:
         - containerPort: 30814
+        - containerPort: 8083
         volumeMounts:
         - mountPath: /server_files
           name: beam-mp-data
       volumes:
       - name: beam-mp-data
         persistentVolumeClaim:
-          claimName: beam-mp-data
+          claimName: beam-mp-pvc

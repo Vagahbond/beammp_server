@@ -5,9 +5,6 @@ metadata:
   namespace: beam-mp
 
 spec:
-  selector:
-    matchLabels:
-      app: beam-mp
   resources:
     requests:
       storage: 2Gi
