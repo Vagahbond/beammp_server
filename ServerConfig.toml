@@ -34,5 +34,5 @@ Name = "BeamMP Server"
 LogChat = true
 MaxCars = 1
 # AuthKey has to be filled out in order to run the server
-AuthKey = "7b7f9b06-ddca-4bf4-974e-6576443c6f9e"
+AuthKey = "example"
 

@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: beam-mp
+  labels:
+    name: beam-mp
