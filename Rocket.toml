@@ -1,0 +1,12 @@
+## defaults for _all_ profiles
+[default]
+port = 8282
+
+[debug]
+port = 8283
+
+[nyc]
+port = 8282
+
+[release]
+port = 8282

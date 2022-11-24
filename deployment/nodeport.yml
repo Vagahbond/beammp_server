@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: beam-mp-nodeport
+spec:
+  selector:
+    app: beam-mp
+  type: NodePort
+  ports:
+
+    - name: beam-mp-port
+      port: 30814
+      nodePort: 31853
+      targetPort: 30814
+      protocol: TCP
+
+    - name: beam-mp-port-udp
+      port: 30814
+      nodePort: 31853
+      targetPort: 30814
+      protocol: UDP
+
+

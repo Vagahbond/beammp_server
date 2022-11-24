@@ -1,1 +1,7 @@
 **/sentry-native
+
+
+# Added by cargo
+
+/target
+*.log

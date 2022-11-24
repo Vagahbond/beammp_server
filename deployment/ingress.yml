@@ -1,21 +1,21 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: beam-mp-ingress
-  labels:
-    name: beam-mp-ingress
+  name: beam-mp
 spec:
+
   rules:
     - host: beammptest.vagahbond.com
       http:
         paths:
           - pathType: Prefix
-            path: "/"
+            path: /
             backend:
               service:
-                name: beam-mp-service
+                name: beam-mp
                 port:
                   number: 8087
+
     # - host: beammp.vagahbond.com
     #   http:
     #     paths:

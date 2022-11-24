@@ -2,7 +2,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: beam-mp-server
+  name: beam-mp
+  labels:
+    app: beam-mp
 spec:
   selector:
     matchLabels:

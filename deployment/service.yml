@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: beam-mp-service
+  name: beam-mp
 spec:
   selector:
     app: beam-mp

@@ -8,7 +8,7 @@ HTTPServerEnabled = true
 # Recommended to have enabled for servers which face the internet. With SSL the server will serve https and requires valid key and cert files
 UseSSL = false
 # Which IP to listen on. Pick 0.0.0.0 for a public-facing server with no specific IP, and 127.0.0.1 or 'localhost' for a local server.
-HTTPServerIP = "127.0.0.1"
+HTTPServerIP = "0.0.0.0"
 HTTPServerPort = 8083
 SSLCertPath = "./.ssl/HttpServer/cert.pem"
 SSLKeyPath = "./.ssl/HttpServer/key.pem"
@@ -24,7 +24,7 @@ ImScaredOfUpdates = false
 [General]
 Description = "BeamMP Default Description"
 ResourceFolder = "Resources"
-Map = "/levels/gridmap_v2/info.json"
+Map = "/levels/italy/info.json"
 MaxPlayers = 8
 Port = 30814
 Private = true
@@ -32,7 +32,7 @@ Debug = false
 Name = "BeamMP Server"
 # Whether to log chat messages in the console / log
 LogChat = true
-MaxCars = 1
+MaxCars = 100
 # AuthKey has to be filled out in order to run the server
-AuthKey = "example"
+AuthKey = "7b7f9b06-ddca-4bf4-974e-6576443c6f9e"
 
