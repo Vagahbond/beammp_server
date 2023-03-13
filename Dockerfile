@@ -25,9 +25,8 @@ RUN chmod +x ./BeamMP-Server-debian-11
 
 EXPOSE 30814
 EXPOSE 8083
-EXPOSE 8082
+EXPOSE 8282
 CMD ["cargo", "run" ]
 # CMD ["./BeamMP-Server-debian-11", "--config=/src/app/ServerConfig.toml", "--working-directory=/server_files" ]
 
 
-FROM rust:1.65-bullseye as runner

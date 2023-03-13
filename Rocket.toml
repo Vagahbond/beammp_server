@@ -3,10 +3,13 @@
 port = 8282
 
 [debug]
-port = 8283
+port = 8282
+
 
 [nyc]
 port = 8282
 
+
 [release]
 port = 8282
+

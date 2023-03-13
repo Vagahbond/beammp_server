@@ -1,4 +1,4 @@
-const EXEC: &str = "../test/BeamMP-Server-archlinux";
+const EXEC: &str = "/src/app/BeamMP-Server-debian-11";
 const CONF_ARG: &str = "--config=/src/app/ServerConfig.toml";
 const DIR_ARG: &str = "--working-directory=/server_files";
 
@@ -16,8 +16,8 @@ pub struct Runner {
 impl Runner {
     pub fn new() -> Runner {
         let mut handle = Command::new(EXEC)
-            // .arg(CONF_ARG)
-            // .arg(DIR_ARG)
+            .arg(CONF_ARG)
+            .arg(DIR_ARG)
             .stdin(Stdio::piped())
             .stdout(Stdio::piped())
             .spawn()

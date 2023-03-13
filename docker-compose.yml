@@ -8,13 +8,14 @@ services:
     build:
       context: .
       target: build
-    container_name: soundhive-front
+    container_name: beammp-server
     ports:
       - "8083:8083"
       - "30814:31853"
-      - "8082:8082"
+      - "8282:8282"
     volumes:
       - ./beamMP-data:/server_files/
       - ./:/src/app/
     environment:
       - ROCKET_PROFILE=debug
+      - ROCKET_ENV=dev
